@@ -189,6 +189,10 @@ header li:last-child a {
   border-radius:0 5px 5px 0;
 }
 
+header li:hover {
+  background-color: #687a8b;
+}
+
 header ul a {
   line-height:1;
   font-size:11px;
@@ -200,7 +204,7 @@ header ul a {
 }
 
 header ul a:hover {
-  color:#999;
+  background-color: #687a8b;
 }
 
 header ul a:active {
