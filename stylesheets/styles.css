@@ -55,15 +55,15 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #2d2d2d;
   padding:50px;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#727272;
+  color:#ffffff;
   font-weight:400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#222;
+  color:#19b868;
   margin:0 0 20px;
 }
 
@@ -80,11 +80,11 @@ h1 {
 }
 
 h2 {
-  color:#393939;
+  color:#;
 }
 
 h3, h4, h5, h6 {
-  color:#494949;
+  color:#19b868;
 }
 
 a {
@@ -121,15 +121,15 @@ blockquote {
 
 code, pre {
   font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  color:#333;
+  color:#c5d928;
   font-size:12px;
 }
 
 pre {
   padding:8px 15px;
-  background: #f8f8f8;
+  background: #ffffff82d;
   border-radius:5px;
-  border:1px solid #e5e5e5;
+  border:1px solid #ffffff82d;
   overflow-x: auto;
 }
 
@@ -168,16 +168,16 @@ header ul {
   list-style:none;
   height:40px;
   padding:0;
-  background: #f4f4f4;
+  background: #3f4f5d;
   border-radius:5px;
-  border:1px solid #e0e0e0;
+  border:1px solid #3f4f5d;
   width:270px;
 }
 
 header li {
   width:89px;
   float:left;
-  border-right:1px solid #e0e0e0;
+  border-right:1px solid #3f4f5d;
   height:40px;
 }
 
@@ -204,12 +204,16 @@ header ul a:hover {
 }
 
 header ul a:active {
-  background-color:#f0f0f0;
+  background-color:#687a8b;
 }
 
 strong {
-  color:#222;
   font-weight:700;
+}
+
+.shell {
+  color:#159fcb;
+  font-weight:1050;
 }
 
 header ul li + li + li {
@@ -220,7 +224,7 @@ header ul li + li + li {
 header ul a strong {
   font-size:14px;
   display:block;
-  color:#222;
+  color:#ffffff;
 }
 
 section {

@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
+    <link rel="stylesheet" href="stylesheets/normalize.css">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,28 +16,29 @@
   <body>
     <div class="wrapper">
       <header>
-        <img src="profile.jpg">
+        <img src="profile.jpg" style="border-radius: 25px">
         <h1>Nathan Robinson</h1>
         <p>Maker, Hacker, Student. I love building websites and programming embedded devices.</p>
         <p>My name is <strong>Nathan Robinson</strong>, I am 16 years old and I live in Cape Elizabeth, Maine. I have created many projects on <a href="https://github.com/nrobinson2000?tab=repositories"><strong>Github</strong></a>, and I love programming C++, Javascript, Bash and Python.</p>
-
+<div id="social">
 <ul>
     <li><a href="https://twitter.com/nrobinson2000"><h2><img src="logos/twitter.png" width="30px"></h2></a></li>
     <li><a href="https://github.com/nrobinson2000"><h2><img src="logos/github.png" width="30px"></h2></a></li>
-    <li><a href="https://community.particle.io/users/nrobinson2000"><h2>Particle</h2></a></li>
+    <li><a href="https://community.particle.io/users/nrobinson2000"><img src="logos/particle.png" width="30px"></a></li>
 </ul>
 
 <ul>
     <li><a href="https://nrobinson2000.herokuapp.com"><h2><img src="logos/slack.png" width="30px"></h2></a></li>
     <li><a href="https://nrobinson2000.github.io/donate-bitcoin"><h2><img src="logos/bitcoin.png" width="23px"></h2></a></li>
-    <li><a href="Nathan-Robinson-resume.pdf"><h2>Resume</h2></a></li>
+    <li><a href="https://www.linkedin.com/in/nrobinson2000"><h2><img src="logos/linkedin.png" width="30px"></h2></a></li>
 </ul>
 
 <ul>
     <li><a href="https://keybase.io/nrobinson2000"><h2>Keybase</h2></a></li>
     <li><a href="https://onename.com/nrobinson2000"><h2>Onename</h2></a></li>
-    <li><a href="https://www.linkedin.com/in/nrobinson2000"><h2><img src="logos/linkedin.png" width="30px"></h2></a></li>
+    <li><a href="Nathan-Robinson-resume.pdf"><h2>Resume</h2></a></li>
 </ul>
+</div>
           <!-- <a href="https://twitter.com/nrobinson2000"><img src="https://img.shields.io/badge/twitter-nrobinson2000-55acee.svg"></a>
           <a href="https://nrobinson2000.herokuapp.com/"><img src="https://nrobinson2000.herokuapp.com/badge.svg"></a>
           <a href="https://github.com/nrobinson2000"><img src="https://img.shields.io/badge/github-nrobinson2000-lightgrey.svg"></a>
@@ -68,7 +70,9 @@
         <a href="https://travis-ci.org/nrobinson2000/po-util"><img src="https://travis-ci.org/nrobinson2000/po-util.svg?branch=master" alt="Build Status"></a>
         <a href="https://circleci.com/gh/nrobinson2000/po-util"><img src="https://circleci.com/gh/nrobinson2000/po-util.svg?style=svg" alt="Circle CI"></a>
         <p>My favorite development platforms are the Particle Photon and Electron.  I created and maintain a script for installing and using the Particle Toolchain on Ubuntu-based Distros and OSX.  The script simplifies offline development and makes it easy to compile firmware for Photons and Electrons.  The script is called <strong>po-util</strong>, an abbreviation of Particle Offline Utility.  The repository for the script can be found on <a href="https://github.com/nrobinson2000/po-util">GitHub</a>.  The script is simple to use, and can be easy installed on Linux and OSX with:</p>
-        <pre><code>curl po-util.com/download | bash</code></pre>
+        <pre><code><strong class="shell">$</strong> git clone https://github.com/nrobinson2000/po-util
+<strong class="shell">$</strong> cd po-util
+<strong class="shell">$</strong> ./po-util.sh install</code></pre>
         <p>Read more about <strong>po-util</strong> at <a href="http://po-util.com">po-util.com</a>
         <p>Particle has recently recognized <strong>po-util</strong> as a great contribution.  <a href="po-util-recognition.pdf">Read it here.</a></p>
 
@@ -94,6 +98,16 @@
         <!-- <iframe style="border:none;" src="https://nrobinson2000.github.io/donate-bitcoin/index.html" height="600px" width="400px"></iframe> -->
 
         <h1><u>Education:</u></h1>
+        <h3>Summer 2016: Oxbridge Experience in Boston</h3>
+        <ul>
+          <li>Majored in Computer Science and minored in Neuropsychology during the summer of 2016 while residing at the Harvard Law School at Harvard University</li>
+          <br>
+          <li>Studied a range of programming topics and concepts, including: Propositional Logic, Turing Machines, First Order Logic, Recursion and sorting Algorithms.</li>
+          <br>
+          <li>Created a semi-autonomous rover using a Particle Photon, Arduino Uno, and a Raspberry Pi that used sensors to navigate mazes and avoid objects.  Building the robot improved my C++ and Python programming skills.</li>
+          <br>
+          <li>Received an A+ in Computer Science</li>
+        </ul>
         <h3>January 2015 - 2016: ACS Hillingdon International School, London</h3>
         <ul>
           <li>Tech Club Leader, Genius Bar facilitator, played Junior Varsity Basketball, Volleyball and Tennis.</li>
@@ -106,7 +120,7 @@
         </ul>
         <h3>Summer 2015: Cambridge Prep Experience</h3>
         <ul>
-          <li>Majored in Science and the Future and minored in Speech and Debate during the summer of 2015 while residing at Peterhouse College at Cambridge University.</li>
+          <li>Majored in Science and the Future and minored in Speech and Debate in the summer of 2015 while residing at Peterhouse College at Cambridge University.</li>
           <br>
           <li>Received an A+ in Science and the Future</li>
         </ul>
@@ -124,12 +138,17 @@
         </ul>
         <h3>Bash:</h3>
         <ul>
-          <li>I am skilled with the Unix command line and enjoy creating scripts to make development quicker and easier. I maintain a script on GitHub that installs the Particle Offline Toolchain on Mac OSX and Ubuntu and allows users to develop offline efficiently or push code to devices using DFU Utilities.</li>
+          <li>I am skilled with the Linux command line and enjoy creating scripts to make development quicker and easier. I maintain a script on GitHub that installs the Particle Offline Toolchain on Mac OSX and Ubuntu and allows users to develop offline efficiently or push code to devices using DFU Utilities.</li>
         </ul>
         <h3>Other Skills:</h3>
         <ul>
-        C++, JavaScript, Bash, Python, GitHub, IoT, Linux
+        <li>C++, JavaScript, Bash, Python, GitHub, IoT, Linux</li>
+        </ul>
+       <h3>Hobbies:</h3>
+       <ul>
+         <li>Tennis, Volleyball, Basketball, Archery, Video games, Creating programming projects </li>
       </ul>
+
 
       <h1><u>Qualifications</u></h1>
       <h3>GitHub Education Member</h3>
