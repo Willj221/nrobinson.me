@@ -300,13 +300,11 @@ footer {
 
   header {
     padding:0;
-        text-align: center;
   }
 
   header ul, header p.view {
     position:static;
     text-align: center;
-padding-right:250px;
   }
 
   header ul {
