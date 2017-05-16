@@ -126,17 +126,19 @@ header ul {
   list-style:none;
   height:40px;
   padding:0;
-  background: #3f4f5d;
+  background: #22282d;
   border-radius:5px;
-  border:1px solid #3f4f5d;
+  border:1px solid #22282d;
   width:270px;
+  transition: background 0.5s linear;
 }
 
 header li {
   width:89px;
   float:left;
-  border-right:1px solid #3f4f5d;
+  border-right:1px solid #22282d;
   height:40px;
+  transition: background 0.5s linear;
 }
 
 header li:first-child a {
@@ -148,7 +150,7 @@ header li:last-child a {
 }
 
 header li:hover {
-  background-color: #687a8b;
+  background-color: #353636;
 }
 
 header ul a {
@@ -159,14 +161,15 @@ header ul a {
   text-align:center;
   padding-top:3px;
   height:34px;
+
 }
 
 header ul a:hover {
-  background-color: #687a8b;
+  background-color: #353636;
 }
 
 header ul a:active {
-  background-color:#687a8b;
+  background-color: #353636;
 }
 
 strong {
