@@ -133,6 +133,15 @@ pre {
   overflow-x: auto;
 }
 
+
+.card {
+  padding:8px 15px;
+  background: #22282d;
+  border-radius:5px;
+  border:1px solid #22282d;
+  overflow-x: auto;
+}
+
 table {
   width:100%;
   border-collapse:collapse;
@@ -276,8 +285,6 @@ footer {
   }
 
   section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
     padding:20px 0;
     margin:0 0 20px;
   }
