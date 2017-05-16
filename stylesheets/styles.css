@@ -140,6 +140,11 @@ pre {
   border-radius:5px;
   border:1px solid #22282d;
   overflow-x: auto;
+  transition: background 0.5s linear;
+}
+
+.card:hover {
+  background-color: #353636;
 }
 
 table {
