@@ -2,3 +2,4 @@ _site/*
 .~lock*
 clippings
 .DS_Store
+Gemfile.lock
