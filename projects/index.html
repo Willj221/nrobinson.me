@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <title>Nathan Robinson</title>
+  <title>Projects</title>
 
   <link rel="stylesheet" href="/stylesheets/styles.css">
   <link rel="stylesheet" href="/stylesheets/github-light.css">
@@ -41,13 +41,14 @@
 
         <ul>
           <li><a href="https://nrobinson2000.herokuapp.com"><h2><img src="/logos/slack.png" width="30px"></h2></a></li>
-          <li><a href="https://nrobinson2000.github.io/donate-bitcoin"><h2><img src="/logos/bitcoin.png" width="23px"></h2></a></li>
+          <!-- <li><a href="https://nrobinson2000.github.io/donate-bitcoin"><h2><img src="/logos/bitcoin.png" width="23px"></h2></a></li> -->
+          <li><a href="/"><h2 style="color: white">Home</h2></a></li>
           <li><a href="https://www.linkedin.com/in/nrobinson2000"><h2><img src="/logos/linkedin.png" width="30px"></h2></a></li>
         </ul>
 
         <ul>
             <!-- <li><a href="https://keybase.io/nrobinson2000"><h2 style="color: white">Keybase</h2></a></li> -->
-            <li><a href="/"><h2 style="color: white">Home</h2></a></li>
+            <li><a href="/services"><h2 style="color: white">Services</h2></a></li>
             <li><a href="https://blog.nrobinson2000.me"><h2 style="color: white">Blog</h2></a></li>
             <li><a href="/Nathan-Robinson-resume.pdf"><h2 style="color: white">Resume</h2></a></li>
         </ul>
@@ -57,46 +58,76 @@
     <section>
 
       <div class="card">
-        <center><img src="discourse.png"></center>
-        <h1>Standalone Discourse Installation: $75</h1>
-        <p>I will install the popular <a href="https://www.discourse.org/">Discourse</a> forum software on your server, and secure it with <a href="https://letsencrypt.org/">free SSL</a> should you choose.</p>
-        <p>You will need your own domain. If you do not have your own server, I will set up a "droplet" on <a href="https://www.digitalocean.com/">Digital Ocean</a> for you.</p>
+        <center><img src="/images/build.gif"></center>
+        <h1>Particle Offline Utility:</h1>
+
+        <a href="https://github.com/nrobinson2000/po-util/issues"><img src="https://img.shields.io/github/issues/nrobinson2000/po-util.svg"></a>
+        <a href="https://github.com/nrobinson2000/po-util/stargazers"><img src="https://img.shields.io/github/stars/nrobinson2000/po-util.svg"></a>
+        <a href="https://travis-ci.org/nrobinson2000/po-util"><img src="https://travis-ci.org/nrobinson2000/po-util.svg?branch=master" alt="Build Status"></a>
+        <a href="https://travis-ci.org/nrobinson2000/homebrew-po"><img src="https://travis-ci.org/nrobinson2000/homebrew-po.svg?branch=master"></a>
+
+        <p>
+          <a href="https://github.com/nrobinson2000/po-util">Po-util</a>, short for Particle Offline Utility, is a tool I maintain for facilitating the ultimate local Particle development experience.</p>
+        <p>
+          Po-util is my personal solution to local Particle development that uses the GCC for ARM Cortex processors toolchain to build your projects using the <a href="https://github.com/spark/firmware">Particle Firmware Source</a> directly on your computer.
+          Po-util can be installed on macOS using Homebrew:
+        </p>
+
+        <pre><code><strong class="shell">$</strong> brew tap nrobinson2000/po
+<strong class="shell">$</strong> brew install po
+<strong class="shell">$</strong> po install</code></pre>
+        <p>Read more about <strong>po-util</strong> at <a href="https://po-util.com/">https://po-util.com/</a>
+          <p>Read <a href="https://particle.hackster.io/nrobinson2000/how-to-develop-particle-locally-using-po-util-e3227f?ref=channel&ref_id=286_trending___&offset=22">my article on Hackster about po-util.</a></p>
       </div>
+
       <hr>
 
       <div class="card">
-        <center><img src="wordpress.png"></center>
-        <h1>Standalone Wordpress Installation: $75</h1>
-        <p>I will install <a href="https://wordpress.org/">Wordpress</a> on your server or set up a "droplet" on <a href="https://www.digitalocean.com/">Digital Ocean</a>, install Wordpress on it, and secure it with <a href="https://letsencrypt.org/">free SSL</a>          should you choose.</p>
-        <p>I will only provide the installation of Wordpress and some basic support. You will be responsible for setting up Wordpress to your liking.</p>
+        <center><img src="demo.gif"></center>
+        <h1>Particle Bash Completion:</h1>
+        <a href="https://travis-ci.org/nrobinson2000/particle-cli-completion"><img src="https://travis-ci.org/nrobinson2000/particle-cli-completion.svg?branch=master"></a> <a href="https://github.com/nrobinson2000/particle-cli-completion"><img src="https://img.shields.io/badge/view%20on-GitHub-blue.svg"></a>
+
+        <p>
+          I created a bash completion script that accelerates and complements the <a href="https://www.particle.io/products/development-tools/particle-command-line-interface">Particle Command Line Interface</a>, providing command suggestions and completions when the tab key is pressed.
+        </p>
+
+        <p>
+          I additionally created an <a href="https://github.com/nrobinson2000/particle-cli-completion/blob/master/install">installation script for the completion</a> that helps users install the completion script on their computer:
+
+          <pre><code><strong class="shell">$</strong> bash <(curl -sL https://git.io/vQWZD)</code></pre>
+      </div>
+
+      <hr>
+      <div class="card">
+        <center><img src="/images/Particle-Pi.png"></center>
+        <h1>Setup guide for Particle on Raspberry Pi:</h1>
+        <a href="https://particle.hackster.io/nrobinson2000/how-to-run-particle-on-raspberry-pi-headless-on-pi-zero-w-cd3ca2?ref=channel&ref_id=286_trending___&offset=5"><img src="https://img.shields.io/badge/view%20on-Hackster-blue.svg"></a>
+        <p>
+          Recently I published a <a href="https://particle.hackster.io/nrobinson2000/how-to-run-particle-on-raspberry-pi-headless-on-pi-zero-w-cd3ca2?ref=channel&ref_id=286_trending___&offset=5">guide on Hackster</a> explaining how to use Raspberry Pi
+          with the Particle Platform in order to access inputs and outputs and dynamicaly control processes on the Raspberry Pi itself. The setup is compatible with the new <a href="https://www.raspberrypi.org/blog/raspberry-pi-zero-w-joins-family/">Raspberry Pi Zero Wireless.</a>
+
+          <br><br> If you already have a Raspberry Pi and a Particle account that is accepted into the Open Raspberry Pi Beta, you can get quickly get Particle running with these commands on your Pi:
+
+          <pre><code><strong class="shell">$</strong> sudo apt update &amp;&amp; sudo apt upgrade
+<strong class="shell">$</strong> bash <( curl -sL https://particle.io/install-pi )</code></pre>
+        </p>
       </div>
 
       <hr>
 
       <div class="card">
-        <center><img src="worddisc.png"></center>
-        <h1>Wordpress and Discourse Installation: $125</h1>
-        <p>I will install <a href="https://wordpress.org/">Wordpress</a> and <a href="https://www.discourse.org/">Discourse</a> on your server or a "droplet" on <a href="https://www.digitalocean.com/">Digital Ocean</a>, and secure them both with <a href="https://letsencrypt.org/">free SSL</a>          should you choose. Final product includes a Wordpress Site and a Discourse Forum on a subdomain of your choice.</p>
-        <p>I will only provide the installation of Wordpress and some basic support. You will be responsible for setting up Wordpress to your liking.</p>
-      </div>
+        <center><img src="/images/bitcoin.png"></center>
+        <h1>Bitcoin Donation Page Generator:</h1>
+        <a href="https://github.com/nrobinson2000/donate-bitcoin/issues"><img src="https://img.shields.io/github/issues/nrobinson2000/donate-bitcoin.svg"></a>
+        <a href="https://github.com/nrobinson2000/donate-bitcoin/stargazers"><img src="https://img.shields.io/github/stars/nrobinson2000/donate-bitcoin.svg"></a>
+        <p>I have created a simple HTML plugin that lets users easily create a page for them to accept Bitcoin donations. It has many features, including generating a unique scan-to-donate QR code and creating a click-to-donate link. It is highly configurable,
+          as its variables can be set in a query in the URL. For a demo, click this button.
+          <a href="http://nrobinson2000.github.io/donate-bitcoin/?amount=10&currency=USD"><img src="https://img.shields.io/badge/donate-$10-orange.svg"></a>
+        </p>
+        <p>For more information, check out the repository on <a href="https://github.com/nrobinson2000/donate-bitcoin">GitHub</a>.</p>
 
+      </div>
       <hr>
-
-      <div class="card">
-        <center><img src="openvpn.png"></center>
-        <h1>Unlimited VPN: $5/month - $55/year</h1>
-        <p>I will provide you with a high-speed VPN hosted in New York. Buy twelve months and get one free!</p>
-      </div>
-
-      <hr>
-
-      <!-- <div class="card">
-        &copy;<script>
-          document.write(new Date().getFullYear())
-        </script> Nathan Robinson
-
-      </div>
-      <hr> -->
 
 
     </section>
