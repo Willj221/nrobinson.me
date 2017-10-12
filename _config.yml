@@ -4,26 +4,10 @@ email: nrobinson2000@me.com
 description: > # this means to ignore newlines until "baseurl:"
   Maker, Hacker, Student. I love building websites and developing on embedded devices.
 
-twitter_box: >
-  <a class="twitter-timeline" href="https://twitter.com/CEHSCoding">Tweets by CEHSCoding</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://blog.nrobinson2000.me" # the base hostname & protocol for your site
 twitter_username: nrobinson2000
 github_username:  nrobinson2000
-# insta_username: cehscoding
-
-
-# nav_message: >
-#
-#   <h3>Welcome to CEHS Coding!</h3>
-#   <ul
-#   <li>CEHS Coding is a student-led club hosted on Monday afternoons in the Achievement Center.</li>
-#   <li>
-#   <br>
-#   <li>This website is hosted on GitHub pages on my GitHub account.  You can see the <a href="https://github.com/nrobinson2000/nrobinson2000.github.io">source code here.</a></li>
-#   </ul>
-
 
 # Build settings
 markdown: kramdown
