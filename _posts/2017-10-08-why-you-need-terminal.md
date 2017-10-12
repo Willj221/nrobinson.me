@@ -6,7 +6,7 @@ date: "2017-10-08 10:32:37 -0400"
 
 <center><img src="/images/terminal/title.png"></center>
 
-**The Terminal,** also know as the command line or a Terminal emulator is an essential component of any useful operating system. It is by far one of the most important applications on Mac and Linux. The Terminal provides an efficient interface to access the true power of a computer better than any graphical interface.
+**The Terminal,** also known as the command line or a Terminal emulator is an essential component of any useful operating system. It is by far one of the most important applications on Mac and Linux. The Terminal provides an efficient interface to access the true power of a computer better than any graphical interface.
 
 **When opening a terminal** you are presented with a shell. On Mac and Linux this shell is Bash, but other shells can be used. (I'll be using Terminal and Bash interchangeably from now on.)
 
@@ -22,16 +22,16 @@ date: "2017-10-08 10:32:37 -0400"
 
 <center><img src="/images/terminal/bashrc.png"></center>
 
-**Bash can be used** to do amazing things, but at the cost of responsibility. If you command it to do an undesired command sequence it will proceed and execute without hesitation, which may lead to unintentional or damaging effects. When using Bash you are executing the power you have over the computer. Use Bash responsibly, and if you are unsure what something does, don't paste it into your terminal. Be smart and google it, or read the manual for the command. **Use caution. The last thing you want to do is compromise your computer.**
+**Bash can be used** to do amazing things but at the cost of responsibility. If you command it to do an undesired command sequence it will proceed and execute without hesitation, which may lead to unintentional or damaging effects. When using Bash you are executing the power you have over the computer. Use Bash responsibly, and if you are unsure what something does, don't paste it into your terminal. Be smart and google it, or read the manual for the command. **Use caution. The last thing you want to do is compromise your computer.**
 
-**The Terminal is a tool,** not an application, meaning that it can be regarded as a lifestyle. I always have a terminal or two open in the directory of a project. I navigate to the project in terminal, and then use terminal to launch graphical applications with the project as the current directory. This is much quicker and less cumbersome than the reverse, which can take much longer. Imagine the time that is wasted and the clicks that are used to open a graphical code editor, click File->Open, navigate to the project, click Open, wait for the folder to be opened, and then finally open a terminal and jump to the project directory so you can run your code. With my method I can run `atom .` in my terminal to launch [Atom](https://atom.io). My terminal remains in the background, and I can come back to it to run code and debug.
+**The Terminal is a tool,** not an application, meaning that it can be regarded as a lifestyle. I always have a terminal or two open in the directory of a project. I navigate to the project in a terminal, and then use the terminal to launch graphical applications with the project as the current directory. This is much quicker and less cumbersome than the reverse, which can take much longer. Imagine the time that is wasted and the clicks that are used to open a graphical code editor, click File->Open, navigate to the project, click Open, wait for the folder to be opened, and then finally open a terminal and jump to the project directory so you can run your code. With my method, I can run `atom .` in my terminal to launch [Atom](https://atom.io). My terminal remains in the background, and I can come back to it to run the code and debug.
 
 <center><img src="/images/terminal/atom_1200px.png"></center>
 <br>
 
 **Terminal fluency** is an essential skill that no developer should go without. Using a computer without using terminal is like driving a car without using the steering wheel. (I hate it when people use vehicles to make computer analogies but they're an efficient way to get a point across.) Every developer should take the time to familiarize themself with terminal if they haven't done so already, as it is a truly rewarding skill. You'll amaze yourself with what you can achieve and the time you can save by creating scripts and commands to automate or expedite tasks in your workflow.
 
-**Using terminal** puts you in full control of your computer and your workflow, and I highly recommend using it whenever possible. I use it everyday and I love it.
+**Using terminal** puts you in full control of your computer and your workflow, and I highly recommend using it whenever possible. I use it every day and I love it.
 
 ---------
 
