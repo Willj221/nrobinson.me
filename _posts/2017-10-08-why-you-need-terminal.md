@@ -6,7 +6,7 @@ date: "2017-10-08 10:32:37 -0400"
 
 <center><img src="/images/terminal/title.png"></center>
 
-**The Terminal,** also known as the command line or a Terminal emulator is an essential component of any useful operating system. It is by far one of the most important applications on Mac and Linux. The Terminal provides an efficient interface to access the true power of a computer better than any graphical interface.
+**The Terminal,** also known as the command line or a Terminal emulator, is an essential component of any useful operating system. It is by far one of the most important applications on Mac and Linux. The Terminal provides an efficient interface to access the true power of a computer better than any graphical interface.
 
 **When opening a terminal** you are presented with a shell. On Mac and Linux this shell is Bash, but other shells can be used. (I'll be using Terminal and Bash interchangeably from now on.)
 
