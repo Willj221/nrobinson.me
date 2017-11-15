@@ -1,16 +1,18 @@
 > **The Particle Web IDE, Particle Dev, and particle-cli are not the only ways to program Particle devices - by Nathan Robinson**
 
 <p align="center">
-<img src="/images/po-util-updated.svg">
+<img src="images/po-util-updated.svg">
 </p>
 
 ## What is po-util?
 
-[Po-util](https://github.com/nrobinson2000/po-util), short for Particle Offline Utility, is a tool I maintain for facilitating the ultimate local Particle development experience. Po-util takes the hassle out of developing Particle projects locally by eliminating the need to use the Particle cloud to build your firmware.
+[Po-util](https://github.com/nrobinson2000/po-util), short for Particle Offline Utility, is a tool I maintain for facilitating the ultimate local Particle development experience. Po-util installs the tools Particle's servers use to build firmware in the cloud onto your computer and provides simple commands to use these tools on your computer.
 
-Po-util is my personal solution to local Particle development that uses the GCC for ARM Cortex processors toolchain to build your projects using the [Particle Firmware Source](https://github.com/spark/firmware) directly on your computer.
+Po-util is unique from the development solutions like the [Web IDE](https://www.particle.io/products/development-tools/particle-web-ide), [Particle Dev](https://www.particle.io/products/development-tools/particle-desktop-ide), and [particle-cli](https://www.particle.io/products/development-tools/particle-command-line-interface) that Particle provides because it is independent of the Particle cloud and it can build your firmware offline. Po-util primarily uses DFU to transfer firmware to a device over USB rather than upload firmware "Over The Air", which is slower and less reliable than a direct connection.
 
-Po-util is a bash shell script that is available on GitHub for [Linux](https://github.com/nrobinson2000/po-util) and [macOS](https://github.com/nrobinson2000/homebrew-po).
+Po-util is my personal solution to local Particle development and I use it exclusively when developing on Particle devices. I hope that you will find it beneficial to your Particle workflow.
+
+Po-util is written in Bash and is available on GitHub for [Linux](https://github.com/nrobinson2000/po-util) and [macOS](https://github.com/nrobinson2000/homebrew-po). I have licensed it under the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html). Contributions and donations are welcome.
 
 ## Features of po-util
 
@@ -18,7 +20,7 @@ There are many more features to po-util than aliasing a few `make` commands.  Po
 
 #### Po-util offers many features, including:
 
-* Full installation of required dependencies.
+* Full installation of required dependencies like the ARM toolchain, DFU Utilities, and the Particle Firmware.
 
 * Support for building firmware for the Particle Photon, Electron, P1, Core, Raspberry Pi, and Redbear Duo.
 
@@ -26,9 +28,9 @@ There are many more features to po-util than aliasing a few `make` commands.  Po
 
 * Sequential Over The Air firmware uploading to multiple devices in a "product".
 
-* A unified project structure that is cross-compatible between the Linux and macOS editions of po-util.
+* A unified project structure that is cross-compatible between Linux and macOS editions.
 
-* An efficient library manager that works with libraries from Particle Libraries 2.0 or GitHub.
+* An efficient library manager that works with libraries from Particle Libraries 2.0 and GitHub.
 
 * A range of keyboard shortcuts to expedite development within [Atom](https://atom.io).
 
@@ -36,19 +38,23 @@ There are many more features to po-util than aliasing a few `make` commands.  Po
 
 Installing and using po-util is a rewarding experience.  (You must be an administrator on your computer however.)
 
-For Linux Distributions based on Debian, Red Hat, or Arch, you can run the following in your Terminal to install po-util:
+Run the following in your Terminal to install po-util:
 
 ```bash
-$ bash <( curl -sL https://git.io/vX4cl ) install
+$ bash <(curl -sL get.po-util.com)
 ```
 
-On macOS, you can install po-util using [Homebrew](https://brew.sh):
+You will be prompted with the following. Press ENTER to confirm.
 
 ```bash
-$ brew tap nrobinson2000/po
-$ brew install po
-$ po install
+Are you ready to install po-util?
+
+Please be sure to follow any prompts or instructions
+during the installation process.
+ENTER / CTRL-C:
 ```
+
+You will asked to configure po-util during the installation process. I suggest you respond with `release/stable`, `duo`, and `yes` when prompted.
 
 ## Creating a project with po-util
 
@@ -57,12 +63,12 @@ To use po-util, you must work in an initialized project directory. (More on proj
 To create a project simply run the following in your Terminal:
 
 ```bash
-$ po init photon newProject
+$ po photon init newProject
 ```
 
 This command creates the `newProject` folder and creates the appropriate folders and files inside.  The [Atom](https://atom.io) shortcuts file is set to build firmware for the Particle Photon. (You can substitute `photon` with `electron`, `P1`, `core`, `pi`, or `duo` to initialize the project for other devices.)
 
-To make use of the shortcuts you will need the [Atom Build package](https://atom.io/packages/build).  You can easily the package and a couple other recommended ones with:
+To make use of the shortcuts you will need the [Atom Build package](https://atom.io/packages/build).  You can easily install the package and a couple of other recommended ones with:
 
 ```bash
 $ po setup-atom
@@ -70,7 +76,7 @@ $ po setup-atom
 
 ## Po-util project structure
 
-Po-util operates by keeping your code separated into projects that follow an organized structure:
+Po-util operates by keeping your code in organized projects that follow the following structure:
 
 ```bash
 firmware/
@@ -121,8 +127,6 @@ Pressing `Ctrl + Alt + 2` builds the firmware and flashes it to your device over
 $ po photon flash
 ```
 
-> **If you prototype rapidly like I do, flashing will become a frequently used shortcut.**
-
 Pressing `Ctrl + Alt + 3` cleans the firmware and removes the `bin/` directory by running:
 
 ```bash
@@ -140,17 +144,6 @@ Pressing `Ctrl + Alt + 5` uploads your firmware Over The Air to any devices list
 ```bash
 $ po photon ota --multi
 ```
-
-## Configuring your devices to work with po-util
-
-All devices that po-util will use DFU Utilities to upload firmware to must have their firmware patched/upgraded in order to allow po-util to automatically put them into DFU mode.  To do so, [manually put your device into DFU mode](https://docs.particle.io/guide/getting-started/modes/photon/#dfu-mode-device-firmware-upgrade-) and run the following to update the system firmware on your device:
-
-```bash
-$ po photon update
-```
-
-
->By default, all Particle devices will go into DFU mode when the computer they are connected to sets the serial baud rate to `14400`.  However, on Linux, baud rates can not be set to an arbitrary value like `14400`.  Po-util solves this caveat by using `19200` as the baud rate to put the device into DFU mode.  If you wish, you can use `14400` on macOS by running `$ po config` and choosing `default` when prompted for a baud rate.
 
 ## Using Particle libraries with po-util
 
@@ -189,7 +182,7 @@ $ po lib ex load neopixel extra-examples
 
 The most practical way to share a po-util project is to upload it to GitHub, as your project is initialized as a git repository and set up to use [Travis CI](https://travis-ci.org/) for testing.
 
-Po-util provides another method if you want a "quick and dirty" way to share your code so that it can be built without using po-util. Using `$ po lib pack`, you can create a copy of your `firmware/` directory with all symbolic links and libraries packaged inside.  A tar.gz archive is created as well.
+Po-util provides another method if you want a "quick and dirty" way to share your code so that it can be built without using po-util. Using `$ po lib pack`, you can create a copy of your `firmware/` directory with all symbolic links and libraries packaged inside.  A .zip archive is created as well.
 
 When using publicly accessible libraries it is advised that you clean the binaries and libraries from your project.  This removes the symbolic links from your `firmware` directory, but leaves the libraries your project depends on in your `libs.txt`.
 
@@ -205,11 +198,11 @@ At any time, you can re-download and add the libraries using:
 $ po lib setup
 ```
 
-> **If you are sharing using GitHub and Travis CI, cleaning is not necessary, as Travis CI will do it for you.**
+> **If you are sharing using GitHub and Travis CI, cleaning is not necessary, as Travis CI will do it for you when building your project.**
 
 ## More po-util information
 
-For more information about po-util, read the man page with `$ man po`, check out [the website](https://nrobinson2000.github.io/po-util/), or consult the [repository on GitHub](https://github.com/nrobinson2000/po-util).
+For more information about po-util, read the man page with `$ man po`, [check out the website](https://nrobinson2000.github.io/po-util/), [consult the repository on GitHub](https://github.com/nrobinson2000/po-util), [join the Gitter room](https://po-util.com/gitter), [view the Trello](https://po-util.com/trello), or [view the thread on the Particle Community](https://po-util.com/particle).
 
 Stars, Feedback, Contributions and Donations are greatly appreciated.  I hope you enjoy using po-util as much as I have enjoyed creating it.
 
@@ -217,5 +210,5 @@ Stars, Feedback, Contributions and Donations are greatly appreciated.  I hope yo
 
 <p>
     <a href="https://www.paypal.me/nrobinson2000"><img src="https://img.shields.io/badge/paypal-donate-009cde.png"></a>
-    <a href="http://nrobinson2000.github.io/donate-bitcoin/?currency=USD"><img src="https://img.shields.io/badge/bitcoin-donate-orange.png"></a>
+    <a href="http://donate.nrobinson2000.me/"><img src="https://img.shields.io/badge/bitcoin-donate-orange.png"></a>
 </p>
