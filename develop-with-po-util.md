@@ -16,7 +16,7 @@ Po-util is written in Bash and is available on GitHub for [Linux](https://github
 
 ## Features of po-util
 
-There are many more features to po-util than aliasing a few `make` commands.  Po-util is unique workflow I meticulously developed so that others can experience local Particle development the way it was meant to be.
+There are many more features to po-util than aliasing a few `make` commands.  Po-util is a unique workflow I meticulously developed so that others can experience local Particle development the way it was meant to be.
 
 #### Po-util offers many features, including:
 
