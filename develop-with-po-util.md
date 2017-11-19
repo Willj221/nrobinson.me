@@ -1,4 +1,4 @@
-> **The Particle Web IDE, Particle Dev, and particle-cli are not the only ways to program Particle devices - by Nathan Robinson**
+> **The Particle Web IDE, Particle Dev, and particle-cli are not the only ways to program Particle devices - by [Nathan Robinson](https://nrobinson2000.me)**
 
 <p align="center">
 <img src="images/po-util-updated.svg">
@@ -26,7 +26,7 @@ There are many more features to po-util than aliasing a few `make` commands.  Po
 
 * "Instant" firmware uploading over USB using DFU Utilities.
 
-* Sequential Over The Air firmware uploading to multiple devices in a "product".
+* Sequential "Over The Air" firmware uploading to multiple devices in a "product".
 
 * A unified project structure that is cross-compatible between Linux and macOS editions.
 
@@ -74,6 +74,8 @@ To make use of the shortcuts you will need the [Atom Build package](https://atom
 $ po setup-atom
 ```
 
+>If you get an error, open Atom and select `Install Shell Commands` from the menu.
+
 ## Po-util project structure
 
 Po-util operates by keeping your code in organized projects that follow the following structure:
@@ -91,7 +93,7 @@ libs.txt
 README.md
 ```
 
-All source code goes in `firmware/`, and the compiled binary is saved as `bin/firmware.bin`. You can specify devices to flash sequentially to in `devices.txt`, and `libs.txt` is how po-util keeps track of what libraries to use in the project.
+All source code goes in `firmware/`, and the firmware is compiled as `bin/firmware.bin`. You can specify devices to flash sequentially to in `devices.txt`, and what libraries to use in `libs.txt`.
 
 Po-util supports build shortcuts for [Atom](https://atom.io), and these are set in `.atom-build.yml` should you need to modify it on a per-project basis.
 
@@ -115,31 +117,31 @@ void loop() { // Put code here to loop forever
 }
 ```
 
-Here is where you can observe one of the most useful features of po-util, the keyboard shortcuts for Atom.  If you press `Ctrl + Alt + 1`, Atom will build the project by running:
+Here is where you can observe one of the most useful features of po-util, the keyboard shortcuts for Atom.  If you press `CTRL-ALT-1`, Atom will build the project by running:
 
 ```bash
 $ po photon build
 ```
 
-Pressing `Ctrl + Alt + 2` builds the firmware and flashes it to your device over USB using DFU Utilities by running the following, which can also be done from your Terminal:
+Pressing `CTRL-ALT-2` builds the firmware and flashes it to your device over USB using DFU Utilities by running the following, which can also be done from your Terminal:
 
 ```bash
 $ po photon flash
 ```
 
-Pressing `Ctrl + Alt + 3` cleans the firmware and removes the `bin/` directory by running:
+Pressing `CTRL-ALT-3` cleans the firmware and removes the `bin/` directory by running:
 
 ```bash
 $ po photon clean
 ```
 
-Pressing `Ctrl + Alt + 4` uploads firmware to your device without rebuilding by running:
+Pressing `CTRL-ALT-4` uploads firmware to your device without rebuilding by running:
 
 ```bash
 $ po photon dfu
 ```
 
-Pressing `Ctrl + Alt + 5` uploads your firmware Over The Air to any devices listed in your `devices.txt` by running:
+Pressing `CTRL-ALT-5` uploads your firmware "Over The Air" to any devices listed in your `devices.txt` by running:
 
 ```bash
 $ po photon ota --multi
@@ -199,6 +201,10 @@ $ po lib setup
 ```
 
 > **If you are sharing using GitHub and Travis CI, cleaning is not necessary, as Travis CI will do it for you when building your project.**
+
+<p align="center">
+<img src="images/terminal/po.png">
+</p>
 
 ## More po-util information
 
