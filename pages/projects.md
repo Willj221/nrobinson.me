@@ -6,4 +6,4 @@ permalink: /projects/
 
 ## Redirecting...
 
-<meta http-equiv="refresh" content="0; url=https://nrobinson2000.me/projects/" />
+<meta http-equiv="refresh" content="0; url=https://nrobinson.me/projects/" />
