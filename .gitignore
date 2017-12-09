@@ -4,3 +4,4 @@ clippings
 .DS_Store
 Gemfile.lock
 *localStorage.json
+.sass-cache
