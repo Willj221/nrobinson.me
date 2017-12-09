@@ -3,3 +3,4 @@ _site/*
 clippings
 .DS_Store
 .sass-cache
+*localStorage.json
