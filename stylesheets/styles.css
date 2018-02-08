@@ -83,15 +83,35 @@ pre {
 
 .card {
   padding: 8px 15px;
-  background: #22282d;
+  background: #2b2b2b;
   border-radius: 5px;
-  border: 1px solid #22282d;
+  border: 1px solid #2b2b2b;
   overflow-x: auto;
-  transition: background 0.5s linear;
+  transition: background 0.25s linear;
 }
 
 .card:hover {
-  background-color: #353636;
+  background-color: #22282d;
+}
+
+
+footer {
+  padding: 8px 15px;
+  background: #2b2b2b;
+  border-radius: 5px;
+  border: 1px solid #2b2b2b;
+  overflow-x: auto;
+  transition: background 0.25s linear;
+
+  width: 240px;
+  float: left;
+  position: fixed;
+  bottom: 20px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+footer:hover {
+  background-color: #22282d;
 }
 
 table {
@@ -133,7 +153,7 @@ header ul {
   border-radius: 5px;
   border: 1px solid #22282d;
   width: 270px;
-  transition: background 0.5s linear;
+  transition: background 0.25s linear;
 }
 
 header li {
@@ -141,7 +161,7 @@ header li {
   float: left;
   border-right: 1px solid #22282d;
   height: 40px;
-  transition: background 0.5s linear;
+  transition: background 0.25s linear;
 }
 
 header li:first-child a {
@@ -152,8 +172,9 @@ header li:last-child a {
   border-radius: 0 5px 5px 0;
 }
 
+
 header li:hover {
-  background-color: #353636;
+  background-color: #19b868;
 }
 
 header ul a {
@@ -164,15 +185,13 @@ header ul a {
   text-align: center;
   padding-top: 3px;
   height: 34px;
+  transition: background 0.25s linear;
 }
 
-header ul a:hover {
-  background-color: #353636;
-}
 
-header ul a:active {
-  background-color: #353636;
-}
+/* header ul a:active {
+  background-color: #19b868;
+} */
 
 strong {
   font-weight: 700;
@@ -210,14 +229,6 @@ hr {
   background: #e5e5e5;
   height: 1px;
   margin: 0 0 20px;
-}
-
-footer {
-  width: 270px;
-  float: right;
-  position: fixed;
-  bottom: 50px;
-  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 @media print, screen and (max-width: 767px) {
@@ -278,6 +289,10 @@ footer {
   }
   header li, header ul li+li+li {
     width: 33%;
+  }
+
+  footer {
+    width: 90%;
   }
 }
 
