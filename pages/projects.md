@@ -35,7 +35,7 @@ permalink: /projects/
     I created a bash completion script that accelerates and complements the <a href="https://www.particle.io/products/development-tools/particle-command-line-interface">Particle Command Line Interface</a>, providing command suggestions and completions when the tab key is pressed.
   </p><p>
     I additionally created an <a href="https://github.com/nrobinson2000/particle-cli-completion/blob/master/install">installation script for the completion</a> that helps users install the completion script on their computer:</p>
-    <pre><code><strong class="shell">$</strong> bash &lt;(curl -sL <a href="https://nrobinson.me/bin/particle-bash/">https://nrobinson.me/bin/particle-bash/</a>)</code>
+    <pre><code><strong class="shell">$</strong> bash &lt;(curl -sL <a href="https://nrobinson.me/bin/particle">https://nrobinson.me/bin/particle</a>)</code>
 </pre></div>
 
 
