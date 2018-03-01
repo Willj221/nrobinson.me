@@ -20,7 +20,7 @@ permalink: /projects/
 </a><p><a href="https://github.com/nrobinson2000/po-util">Po-util</a>, short for Particle Offline Utility, is a tool I maintain for facilitating the ultimate local Particle development experience.</p><p>
     Po-util is my personal solution to local Particle development that uses the GCC for ARM Cortex processors toolchain to build your projects using the <a href="https://github.com/spark/firmware">Particle Firmware Source</a> directly on your computer.
     Po-util can be installed on macOS using Homebrew:
-  </p><pre><code><strong class="shell">$</strong> bash <(curl -sL https://get.po-util.com)</code>
+  </p><pre><code><strong class="shell">$</strong> bash <(curl -sL <a href="https://get.po-util.com">get.po-util.com</a>)</code>
 </pre><p>Read more about <strong>po-util</strong> at <a href="https://po-util.com/">https://po-util.com/</a></p><p>Read <a href="https://particle.hackster.io/nrobinson2000/how-to-develop-particle-locally-using-po-util-e3227f?ref=channel&amp;ref_id=286_trending___&amp;offset=22">my article on Hackster about po-util.</a></p></div>
 
 --------------------------------------------------------------------------------
